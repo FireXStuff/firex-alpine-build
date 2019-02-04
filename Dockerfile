@@ -2,6 +2,7 @@
 FROM python:3-alpine
 
 RUN pip install \
-setuplib \
+--upgrade pip \
+setuptools \
 coverage \
 twine
