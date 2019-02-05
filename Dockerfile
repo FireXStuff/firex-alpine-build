@@ -6,3 +6,5 @@ RUN pip install \
 setuptools \
 coverage \
 twine
+
+RUN apk add git
