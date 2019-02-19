@@ -5,6 +5,7 @@ RUN pip install \
 --upgrade pip \
 setuptools \
 coverage \
-twine
+twine \
+codecov
 
 RUN apk add git
