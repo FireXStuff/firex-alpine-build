@@ -5,7 +5,9 @@ RUN pip install \
 --upgrade pip \
 setuptools \
 coverage \
+codecov \
 twine \
-codecov
+sphinx \ 
+sphinx_rtd_theme
 
 RUN apk add git
