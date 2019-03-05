@@ -1,4 +1,3 @@
-
 FROM python:3-alpine
 
 RUN pip install \
@@ -10,4 +9,5 @@ twine \
 sphinx \ 
 sphinx_rtd_theme
 
-RUN apk add git
+RUN apk add git \
+redis
