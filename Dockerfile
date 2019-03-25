@@ -9,5 +9,10 @@ twine \
 sphinx \ 
 sphinx_rtd_theme
 
-RUN apk add git \
-redis
+RUN apk add --update \
+git \
+redis \
+gcc \
+libc-dev \
+fortify-headers \
+linux-headers && rm -rf /var/cache/apk/*
