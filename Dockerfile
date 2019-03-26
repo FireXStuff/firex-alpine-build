@@ -12,14 +12,22 @@ sphinx_rtd_theme
 RUN apk add --update \
 sudo \
 git \
-redis \
+make \
 gcc \
 libc-dev \
 fortify-headers \
 linux-headers && rm -rf /var/cache/apk/*
 
+RUN wget http://download.redis.io/releases/redis-3.2.5.tar.gz && \
+tar xvzf redis-3.2.5.tar.gz && \
+cd redis-3.2.5 && \
+make 
+
 RUN adduser -S -D -s /bin/sh firex
 RUN echo "firex ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
 USER firex
 WORKDIR /home/firex
+
+ENV redis_bin_dir=/redis-3.2.5/src
 
