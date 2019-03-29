@@ -7,7 +7,8 @@ coverage \
 codecov \
 twine \
 sphinx \ 
-sphinx_rtd_theme
+sphinx_rtd_theme \
+eventlet
 
 RUN apk add --update \
 sudo \
