@@ -6,6 +6,8 @@ git \
 make \
 gcc \
 libc-dev \
+libffi-dev \
+libressl-dev \
 fortify-headers \
 npm \
 linux-headers && rm -rf /var/cache/apk/*
