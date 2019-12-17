@@ -10,6 +10,9 @@ libffi-dev \
 libressl-dev \
 fortify-headers \
 npm \
+openssh \
+bash \
+coreutils \
 linux-headers && rm -rf /var/cache/apk/*
 
 RUN wget http://download.redis.io/releases/redis-3.2.5.tar.gz && \
@@ -30,6 +33,14 @@ eventlet
  
 RUN adduser -S -D -s /bin/sh firex
 RUN echo "firex ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+# Start root SSH setup
+RUN echo "root:passwd1" | chpasswd
+RUN printf "PubkeyAuthentication yes\nPasswordAuthentication no" > /etc/ssh/sshd_config
+RUN /usr/bin/ssh-keygen -A
+RUN /usr/bin/ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
+RUN cp ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
+# End root SSH setup
 
 USER firex
 WORKDIR /home/firex
