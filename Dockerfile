@@ -23,7 +23,7 @@ make
 RUN pip install \
 --upgrade pip \
 setuptools \
-coverage==4.5.44.5.44.5.44.5.4 \
+coverage==4.5.4 \
 codecov \
 twine \
 sphinx \ 
