@@ -23,13 +23,13 @@ make
 RUN pip install \
 --upgrade pip \
 setuptools \
-coverage==4.5.4 \
-codecov==2.0.15 \
+coverage \
+codecov \
 twine \
 sphinx \ 
 sphinx_rtd_theme \
-eventlet
-
+eventlet \
+virtualenv
  
 RUN adduser -S -D -s /bin/sh firex
 RUN echo "firex ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
