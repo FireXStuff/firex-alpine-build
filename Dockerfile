@@ -14,7 +14,9 @@ openssh \
 bash \
 coreutils \
 moreutils \
-linux-headers && rm -rf /var/cache/apk/*
+linux-headers && rm -rf /var/cache/apk/* \
+libxml2-dev \
+libxslt-dev
 
 RUN wget http://download.redis.io/releases/redis-3.2.5.tar.gz && \
 tar xvzf redis-3.2.5.tar.gz && \
