@@ -5,6 +5,7 @@ sudo \
 git \
 make \
 gcc \
+g++ \
 libc-dev \
 libffi-dev \
 libressl-dev \
