@@ -33,6 +33,7 @@ codecov \
 twine \
 sphinx \ 
 sphinx_rtd_theme \
+sphinx-sitemap \
 eventlet \
 virtualenv
  
