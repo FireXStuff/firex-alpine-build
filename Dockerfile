@@ -18,6 +18,10 @@ moreutils \
 linux-headers \
 libxml2-dev \
 libxslt-dev \
+musl-dev \
+python3-dev \
+openssl-dev \
+cargo \
 && rm -rf /var/cache/apk/*
 
 RUN wget http://download.redis.io/releases/redis-3.2.5.tar.gz && \
