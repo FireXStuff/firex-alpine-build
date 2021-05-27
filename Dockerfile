@@ -24,9 +24,9 @@ openssl-dev \
 cargo \
 && rm -rf /var/cache/apk/*
 
-RUN wget http://download.redis.io/releases/redis-3.2.5.tar.gz && \
-tar xvzf redis-3.2.5.tar.gz && \
-cd redis-3.2.5 && \
+RUN wget http://download.redis.io/releases/redis-6.2.3.tar.gz && \
+tar xvzf redis-6.2.3.tar.gz && \
+cd redis-6.2.3 && \
 make 
 
 RUN pip install \
@@ -58,5 +58,5 @@ RUN /usr/bin/ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
 RUN cp ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
 # End firex SSH setup
 
-ENV redis_bin_dir=/redis-3.2.5/src
+ENV redis_bin_dir=/redis-6.2.3/src
 
