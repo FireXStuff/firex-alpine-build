@@ -1,4 +1,4 @@
-FROM python:3.7.9-alpine
+FROM python:3.8.10-alpine
 
 RUN apk add --update \
 sudo \
