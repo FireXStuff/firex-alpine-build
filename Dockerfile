@@ -21,6 +21,7 @@ libxslt-dev \
 musl-dev \
 python3-dev \
 openssl-dev \
+sqlite \
 cargo \
 && rm -rf /var/cache/apk/*
 
