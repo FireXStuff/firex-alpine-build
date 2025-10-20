@@ -23,6 +23,8 @@ python3-dev \
 openssl-dev \
 sqlite \
 cargo \
+librdkafka-dev \
+pkgconf \
 && rm -rf /var/cache/apk/*
 
 RUN wget http://download.redis.io/releases/redis-6.2.3.tar.gz && \
