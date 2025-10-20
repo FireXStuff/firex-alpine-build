@@ -32,6 +32,15 @@ tar xvzf redis-6.2.3.tar.gz && \
 cd redis-6.2.3 && \
 make 
 
+# Build and install librdkafka v2.12.0
+RUN git clone --branch v2.12.0 https://github.com/confluentinc/librdkafka.git && \
+    cd librdkafka && \
+    ./configure && \
+    make && \
+    make install && \
+    cd .. && \
+    rm -rf librdkafka
+
 RUN pip install \
 --upgrade pip \
 setuptools \
